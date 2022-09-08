@@ -1,3 +1,5 @@
+// -------------------------------------- Start basic course JS ------------------------------------
+
 // lesson 1 //
 
 /* My new commit */
@@ -1001,3 +1003,20 @@ function checkScope() {
     console.log('Function scope i is: ', i);
     return i;
 }
+
+
+// -------------------------------------- Completed basic course JS ------------------------------------
+
+// -------------------------------------- Start ES6 course JS ------------------------------------
+
+// lesson 1
+
+function checkScope() {
+    var i = 'function scope';
+    if (true) {
+      i = 'block scope';
+      console.log('Block scope i is: ', i);
+    }
+    console.log('Function scope i is: ', i);
+    return i;
+  }
