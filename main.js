@@ -1014,14 +1014,14 @@ function checkScope() {
 function checkScope() {
     var i = 'function scope';
     if (true) {
-      i = 'block scope';
-      console.log('Block scope i is: ', i);
+        i = 'block scope';
+        console.log('Block scope i is: ', i);
     }
     console.log('Function scope i is: ', i);
     return i;
-  }
+}
 
-  // lesson 2
+// lesson 2
 const s = [5, 7, 2];
 function editInPlace() {
     s[0] = 2
@@ -1136,18 +1136,78 @@ const failuresList = makeList(result.failure);
 // lesson 16
 const createPerson = (name, age, gender) => {
     return {
-      name,
-      age,
-    gender
+        name,
+        age,
+        gender
     };
-  };
+};
 
 // lesson 17
 const bicycle = {
     gear: 2,
-    setGear (newGear) {
-      this.gear = newGear;
+    setGear(newGear) {
+        this.gear = newGear;
     }
-  };
-  bicycle.setGear(3);
-  console.log(bicycle.gear);
+};
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+// lesson 18
+class Vegetable {
+    constructor(name) {
+        this.name = name
+    }
+}
+const carrot = new Vegetable('carrot');
+console.log(carrot.name);
+
+// lesson 18
+class Thermostat {
+    constructor(fahrenheit) {
+        this._fahrenheit = fahrenheit
+    }
+    get temperature() {
+        return 5 / 9 * (this._fahrenheit - 32)
+    }
+    set temperature(celsius) {
+        this._fahrenheit = celsius * 9.0 / 5 + 32
+    }
+}
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
+
+// lesson 19
+// <html>
+//   <body>
+// <script type="module" src="index.js"></script>
+//   </body>
+// </html>
+
+// lesson 20
+export const uppercaseString = (string) => {
+    return string.toUpperCase();
+}
+export const lowercaseString = (string) => {
+    return string.toLowerCase()
+}
+
+// lesson 21
+import { uppercaseString, lowercaseString } from './string_functions.js';
+uppercaseString("hello");
+lowercaseString("WORLD!");
+
+// lesson 22
+import * as stringFunctions from "./string_functions.js"
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+
+// lesson 23
+export default function subtract(x, y) {
+    return x - y;
+}
+
+// lesson 24
+import subtract from "./math_functions.js";
+subtract(7, 4);
