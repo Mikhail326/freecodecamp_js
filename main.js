@@ -1253,3 +1253,57 @@ makeServerRequest.then(result => {
 makeServerRequest.catch(error => {
     console.log(error);
 });
+
+
+
+//   ----------------Regular Expressions------------
+
+// lesson 1
+let myString = "Hello, World!";
+let myRegex = /Hello/;
+let result = myRegex.test(myString);
+
+// lesson 2
+let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+let waldoRegex = /Waldo/;
+let result = waldoRegex.test(waldoIsHiding);
+
+// lesson 3
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/;
+let result = petRegex.test(petString);
+
+// lesson 4
+let myString = "freeCodeCamp";
+let fccRegex = /freeCodeCamp/i; 
+let result = fccRegex.test(myString);
+
+// lesson 5
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/; 
+let result = extractStr.match(codingRegex); 
+
+// lesson 6
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /Twinkle/gi; 
+let result = twinkleStar.match(starRegex); 
+
+// lesson 7
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /.un/; 
+let result = unRegex.test(exampleStr);
+
+// lesson 8
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/gi; 
+let result = quoteSample.match(vowelRegex); 
+
+// lesson 9
+let quoteSample = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi; 
+let result = quoteSample.match(alphabetRegex); 
+
+// lesson 10
+let quoteSample = "Blueberry 3.141592653s are delicious.";
+let myRegex = /[h-s2-6]/gi; 
+let result =quoteSample.match(myRegex) ;
