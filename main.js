@@ -1211,3 +1211,45 @@ export default function subtract(x, y) {
 // lesson 24
 import subtract from "./math_functions.js";
 subtract(7, 4);
+
+// lesson 25
+const makeServerRequest = new Promise((resolve, reject) => { });
+
+// lesson 26
+const makeServerRequest = new Promise((resolve, reject) => {
+    let responseFromServer;
+    if (responseFromServer) {
+        resolve('We got the data');
+    } else {
+        reject('Data not received');
+    }
+});
+
+// lesson 27
+const makeServerRequest = new Promise((resolve, reject) => {
+    let responseFromServer = true;
+    if (responseFromServer) {
+        resolve("We got the data");
+    } else {
+        reject("Data not received");
+    }
+});
+makeServerRequest.then(result => {
+    console.log(result)
+})
+
+// lesson 28
+const makeServerRequest = new Promise((resolve, reject) => {
+    let responseFromServer = false;
+    if (responseFromServer) {
+        resolve("We got the data");
+    } else {
+        reject("Data not received");
+    }
+});
+makeServerRequest.then(result => {
+    console.log(result);
+});
+makeServerRequest.catch(error => {
+    console.log(error);
+});
