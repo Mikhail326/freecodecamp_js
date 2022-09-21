@@ -1306,4 +1306,26 @@ let result = quoteSample.match(alphabetRegex);
 // lesson 10
 let quoteSample = "Blueberry 3.141592653s are delicious.";
 let myRegex = /[h-s2-6]/gi; 
-let result =quoteSample.match(myRegex) ;
+let result =quoteSample.match(myRegex) ; 
+
+// lesson 11
+let quoteSample = "3 blind mice.";
+let myRegex = /[^0-9aeiou]/gi; 
+let result = quoteSample.match(myRegex); 
+
+// lesson 12
+let difficultSpelling = "Mississippi";
+let myRegex = /s+/gi; 
+let result = difficultSpelling.match(myRegex);
+
+// lesson 13
+let chewieRegex = /Aa*/g; 
+let result = chewieQuote.match(chewieRegex);
+
+// lesson 14
+let text = "<h1>Winter is coming</h1>";
+let myRegex = /<h*?1>/; 
+let result = text.match(myRegex);
+
+// lesson 15
+let reCriminals = /C+.*?/g;
