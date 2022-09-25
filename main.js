@@ -1275,57 +1275,114 @@ let result = petRegex.test(petString);
 
 // lesson 4
 let myString = "freeCodeCamp";
-let fccRegex = /freeCodeCamp/i; 
+let fccRegex = /freeCodeCamp/i;
 let result = fccRegex.test(myString);
 
 // lesson 5
 let extractStr = "Extract the word 'coding' from this string.";
-let codingRegex = /coding/; 
-let result = extractStr.match(codingRegex); 
+let codingRegex = /coding/;
+let result = extractStr.match(codingRegex);
 
 // lesson 6
 let twinkleStar = "Twinkle, twinkle, little star";
-let starRegex = /Twinkle/gi; 
-let result = twinkleStar.match(starRegex); 
+let starRegex = /Twinkle/gi;
+let result = twinkleStar.match(starRegex);
 
 // lesson 7
 let exampleStr = "Let's have fun with regular expressions!";
-let unRegex = /.un/; 
+let unRegex = /.un/;
 let result = unRegex.test(exampleStr);
 
 // lesson 8
 let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
-let vowelRegex = /[aeiou]/gi; 
-let result = quoteSample.match(vowelRegex); 
+let vowelRegex = /[aeiou]/gi;
+let result = quoteSample.match(vowelRegex);
 
 // lesson 9
 let quoteSample = "The quick brown fox jumps over the lazy dog.";
-let alphabetRegex = /[a-z]/gi; 
-let result = quoteSample.match(alphabetRegex); 
+let alphabetRegex = /[a-z]/gi;
+let result = quoteSample.match(alphabetRegex);
 
 // lesson 10
 let quoteSample = "Blueberry 3.141592653s are delicious.";
-let myRegex = /[h-s2-6]/gi; 
-let result =quoteSample.match(myRegex) ; 
+let myRegex = /[h-s2-6]/gi;
+let result = quoteSample.match(myRegex);
 
 // lesson 11
 let quoteSample = "3 blind mice.";
-let myRegex = /[^0-9aeiou]/gi; 
-let result = quoteSample.match(myRegex); 
+let myRegex = /[^0-9aeiou]/gi;
+let result = quoteSample.match(myRegex);
 
 // lesson 12
 let difficultSpelling = "Mississippi";
-let myRegex = /s+/gi; 
+let myRegex = /s+/gi;
 let result = difficultSpelling.match(myRegex);
 
 // lesson 13
-let chewieRegex = /Aa*/g; 
+let chewieRegex = /Aa*/g;
 let result = chewieQuote.match(chewieRegex);
 
 // lesson 14
 let text = "<h1>Winter is coming</h1>";
-let myRegex = /<h*?1>/; 
+let myRegex = /<h*?1>/;
 let result = text.match(myRegex);
 
 // lesson 15
 let reCriminals = /C+.*?/g;
+
+
+
+//   ----------------Debugging------------
+
+// lesson 1
+let a = 5;
+let b = 1;
+a++;
+console.log(a);
+
+// lesson 2
+let output = "Get this to show once in the freeCodeCamp console and not at all in the browser console";
+console.log(output)
+console.clear()
+
+// lesson 3
+let seven = 7;
+let three = "3";
+console.log(seven + three);
+console.log(typeof seven);
+console.log(typeof three);
+
+// lesson 4
+let receivables = 10;
+let payables = 8;
+let netWorkingCapital = receivables - payables;
+console.log(`Net working capital is: ${netWorkingCapital}`);
+
+// lesson 5
+let myArray = [1, 2, 3];
+let arraySum = myArray.reduce((previous, current) => previous + current);
+console.log(`Sum of array values is: ${arraySum}`);
+
+// lesson 6
+let innerHtml = "<p>Click here to <a href='#Home'>return home</a></p>";
+console.log(innerHtml);
+
+// lesson 7
+let x = 7;
+let y = 9;
+let result = "to come";
+if (x == y) {
+    result = "Equal!";
+} else {
+    result = "Not equal!";
+}
+console.log(result);
+
+// lesson 8
+function getNine() {
+    let x = 6;
+    let y = 3;
+    return x + y;
+}
+let result = getNine();
+console.log(result);
