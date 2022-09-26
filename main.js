@@ -1648,3 +1648,48 @@ function addFriend(userObj, friend) {
     return userObj.data.friends
 }
 console.log(addFriend(user, 'Pete'));
+
+// -----------------------Basic Algorithm Scripting-----------------
+
+// lesson 1
+function convertCtoF(celsius) {
+    let fahrenheit = (celsius * 9 / 5) + 32;
+    return fahrenheit;
+}
+convertCtoF(30);
+
+// lesson 2
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+reverseString("hello");
+
+// lesson 3
+function factorialize(num) {
+    let res = []
+    for (let i = 1; i <= num; i++) {
+        res.push(i)
+    }
+
+    return res.reduce((acc, el) => el * acc, 1)
+}
+factorialize(5);
+
+// lesson 4
+function findLongestWordLength(str) {
+    const res = []
+    str.split(' ').map(el => res.push(el.length))
+    return res.sort((a, b) => b - a)[0]
+}
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+// lesson 5
+function largestOfFour(arr) {
+    const res = []
+    for (let i = 0; i < arr.length; i++) {
+        res.push(arr[i].sort((a, b) => b - a)[0])
+    }
+    return res
+}
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
