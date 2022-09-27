@@ -1693,3 +1693,48 @@ function largestOfFour(arr) {
 }
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 
+// lesson 6
+function confirmEnding(str, target) {
+    return str.substring(str.length - target.length, str.length) == target
+}
+confirmEnding("Bastian", "n");
+
+// lesson 7
+function repeatStringNumTimes(str, num) {
+    let res = ''
+    if (num > 0) {
+        for (let i = 1; i <= num; i++) {
+            res += str
+        }
+    }
+    return res;
+}
+repeatStringNumTimes("abc", 4);
+
+// lesson 8
+function truncateString(str, num) {
+    if (str.length < num || str.length === num) {
+        return str
+    }
+    return str.slice(0, num) + '...';
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+// lesson 9
+function findElement(arr, func) {
+    const filterArr = arr.filter(func)
+
+    return filterArr[0]
+}
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+// lesson 10
+function booWho(bool) {
+    if (bool === true || bool === false) {
+        return true;
+    } else {
+        return false
+    }
+}
+booWho(null);
