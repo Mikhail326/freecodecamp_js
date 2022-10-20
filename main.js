@@ -1784,3 +1784,14 @@ function frankenSplice(arr1, arr2, n) {
   }
   
   console.log(mutation(["hello", "hey"]))
+
+  // lesson 16
+  function chunkArrayInGroups(arr, size) {
+    const result = []
+    while(arr.length > 0) {
+      result.push(arr.splice(0, size))
+    }
+    return result
+  }
+  
+  console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2))
