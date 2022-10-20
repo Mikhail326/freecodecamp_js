@@ -1755,3 +1755,11 @@ function frankenSplice(arr1, arr2, n) {
    
     return copyArr1.concat(copyArr2)
   }
+
+  // lesson 13
+  function bouncer(arr) {
+    const copyArr = [...arr]
+    return copyArr.filter(el => Boolean(el) == true);
+  }
+  
+  bouncer([7, "ate", "", false, 9]);
