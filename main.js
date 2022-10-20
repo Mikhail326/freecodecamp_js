@@ -1738,3 +1738,10 @@ function booWho(bool) {
     }
 }
 booWho(null);
+
+// lesson 11
+function titleCase(str) {
+    return str.split(' ').map(el => el[0].toUpperCase() + el.slice(1, el.length).toLowerCase()).join(' ')
+  }
+
+titleCase("I'm a little tea pot")
