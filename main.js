@@ -1745,3 +1745,13 @@ function titleCase(str) {
   }
 
 titleCase("I'm a little tea pot")
+
+// lesson 12
+function frankenSplice(arr1, arr2, n) {
+    const copyArr1 = [...arr1]
+    const copyArr2 = [...arr2]
+    const splice = copyArr2.splice(0, n)
+    copyArr1.unshift(...splice)
+   
+    return copyArr1.concat(copyArr2)
+  }
