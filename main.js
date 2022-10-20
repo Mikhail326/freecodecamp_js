@@ -1777,3 +1777,10 @@ function frankenSplice(arr1, arr2, n) {
   }
   
   getIndexToIns([40, 60], 50);
+
+  // lesson 15
+  function mutation(arr) {
+    return arr[1].toLowerCase().split('').every(el => arr[0].toLowerCase().indexOf(el) !== -1)
+  }
+  
+  console.log(mutation(["hello", "hey"]))
